@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #about-us {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+#about-us h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#about-us-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#read-more-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#read-more-btn:hover {
+  background-color: #444;
+}
+
+#about-us-content {
+  display: none;
+}
+
+#about-us-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+    <!-- About Us Section -->
+<section id="about-us">
+    <div class="container">
+      <h2>About Us</h2>
+      <p id="about-us-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Donec sed odio dui.</p>
+      <button id="read-more-btn">Read More</button>
+      <div id="about-us-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Donec sed odio dui.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Donec sed odio dui.</p>
+      </div>
+    </div>
+  </section>
+</body>
+
+
+<script>
+    // Add event listener to read more button
+document.getElementById('read-more-btn').addEventListener('click', function() {
+  // Toggle about us content
+  document.getElementById('about-us-content').classList.toggle('show');
+});
+
+// Add animation to about us content
+document.getElementById('about-us-content').addEventListener('transitionend', function() {
+  if (this.classList.contains('show')) {
+    this.style.opacity = 1;
+  } else {
+    this.style.opacity = 0;
+  }
+});
+</script>
+</html>
